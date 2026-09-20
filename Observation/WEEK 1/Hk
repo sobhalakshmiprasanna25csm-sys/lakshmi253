@@ -1,0 +1,28 @@
+import java.util.*;
+
+class Student {
+    int rollNo;
+    String name;
+    int[] marks;
+
+    Student(int rollNo, String name, int[] marks) {
+        this.rollNo = rollNo;
+        this.name = name;
+        this.marks = marks;
+    }
+
+    int calculateTotal() {
+        int total = 0;
+        for (int mark : marks)
+            total += mark;
+        return total;
+    }
+
+    double calculateAverage() {
+        return calculateTotal() / (double) marks.length;
+    }
+
+    int findHighest() {
+        int high = marks[0];
+        for (int mark : marks)
+            high
